@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="BelirliTestleriParalelCalistirma" parallel="classes" thread-count="">
+
+        <classes>
+            <class name="techproed.tests.day22_DataProvider_XmlFile.C06_ParallelTest">
+                <methods>
+                    <include name="test01"/>
+                    <include name="test02"/>
+                </methods>
+            </class>
+            <class name="techproed.tests.day22_DataProvider_XmlFile.C07_ParallelTest">
+
+            </class>
+        </classes>
+    </test>
+</suite>
+
+    <!-- TestNG de testlerimi eşzamanlı olarak aynı anda çalıştırabilmek için öncelikle class'larımızdaki
+    kullanacağımız driver ayarlarını yapmamız gerekir. Test class'ımız içindeki methodları eşzamanlı olarak
+    çalıştırabilmek için xml file'a ihtiyacımız var. Parallel test yapacağımız classtan xml file
+    oluşturduktan sonra, <suite> tagındaki name parametresinden sonra parallel parametresi eklenir ve
+    methodlar içinmi classlar içinmi paralel test yapacağımızı belirtiriz. sonra Thread count parametresi
+    ile aynı anda kaç tane browser çalıştırmak istersek onu belirtiriz-->
